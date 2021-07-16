@@ -1,0 +1,188 @@
+body {
+    background-color: #eaeaea !important;
+}
+
+.hamburgerMenu {
+    font-size:32px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:8px;
+    color:#fff;
+}
+
+.navbarBrand {
+    color:#fff;
+    width:300px;
+    font-size:18px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:16px;
+}
+
+.sidebar-hidden {
+    width:200px;
+    height: 100vh;
+    position: fixed;
+    background-color:#000;
+    left:-200px;
+    transition: all 0.5s;
+    z-index:999;
+}
+
+.sidebar-show {
+    width:200px;
+    height: 100vh;
+    position: fixed;
+    background-color:#343A40;
+    /* background-color:#c0c0c0;*/
+    left:0px;
+    transition: all 0.5s;
+    z-index:999;
+}
+
+.sidebar-config {
+    padding-top:16px;
+    padding-left:16px;
+    font-size:2.8em;
+    color:#CBD0D9;
+}
+
+.sidebar-hr {
+    border-top: 1px solid #6E7C96;
+}
+
+input[type='radio'] {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+input[type='radio']:checked::before {
+    color:#ff0 !important;
+    background-color:#ff0 !important;
+}
+
+input[type='checkbox'] {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.label-style {
+    font-size:14px;
+    padding-left:8px;
+    color:#CBD0D9;
+}
+
+.lead {
+    padding-top:16px;
+    padding-left:16px;
+    font-size:16px;
+    color:#CBD0D9;
+}
+
+.dash-dropdown {
+    padding-top:8px;
+    padding-right:16px;
+    padding-left:16px;
+}
+
+.Select--multi .Select-value{
+    font-size: 1.5em;
+}
+
+.Select-placeholder {
+    font-size: 1.8em;
+}
+
+.Select-menu-outer {
+    font-size: 1.8em;
+    color:#003458;
+}
+
+.myCard {
+    height:100%;
+    margin: 10px 10px 10px 10px;
+    padding: 0px;
+    border: solid 1px #dddddd;
+    border-radius: 6px;
+    box-shadow: 0 .25rem .5rem rgba(0,0,0,.175)!important;
+}
+
+.myCard h4 {
+    background-color:#ffffff;
+    padding: 10px;
+    font-weight:400;
+    font-size:18px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.myCardWrapper {
+    padding:10px 0px 30px 0px;
+    margin:0px;
+    display:inline-block;
+    background-color:#fff;
+}
+
+.content {
+    background-color:#eaeaea;
+    height:100vh;
+
+}
+
+.dashCollapse {
+    width:220px;
+    background:#fff;
+    margin:10px 0px 0px 10px;
+    padding: 10px;
+    font-weight:400;
+    font-size:18px;
+    border: solid 1px #dddddd;
+    border-bottom: 0px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.fa-raspberry-pi {
+    margin-right:10px;
+    font-size:24px;
+}
+
+.fa-plus {
+    float:right;
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    margin-left:40px;
+    font-size:18px;
+}
+
+.fa-minus {
+    float:right;
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    margin-left:40px;
+    font-size:18px;
+}
+
+.dashRow {
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:0px;
+    border: solid 1px #dddddd;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.daq-graduatedbar--light > div > div {
+    height: 10px;
+    size:100;
+}
+
+
+circle {
+    stroke-width:20px;
+}
+
+.daq-gauge--light > div > div > svg {
+    width:150px;
+    height:150px;
+    viewBox: 0 0 150 150;
+}
