@@ -58,4 +58,13 @@ Using the sleep command, the job is started with a time delay. My crontable look
 being "jens" my user and "/home/jens/health.sh" the path to the script to be executed.
 For some more information on how to handle cronjobs, please refer to this web page
 
-(https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/)
+https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/
+
+If we look at the health.sh script next, we will notice that there is only one Python call that starts the actual script.
+
+```bash
+#!/bin/sh
+
+python3 temperature.py
+```
+
