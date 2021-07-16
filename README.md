@@ -69,3 +69,5 @@ python3 temperature.py
 ```
 
 So the temperature.py script is where the magic happens. I don't want to post the entire source code here, please have a look at the "node" folder where you can find the script that need to be deployed on the nodes.
+
+## Server Configuration
