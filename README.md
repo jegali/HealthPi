@@ -73,6 +73,7 @@ So the temperature.py script is where the magic happens. I don't want to post th
 Maybe you need to install some python dependencies. Before running the script by cron do a manual run. I had to install psutil by
 
 ```bash
+sudo apt install python3-pip
 pip install psutil
 ```
 
