@@ -153,5 +153,23 @@ with this content:
 0 * * * * /usr/sbin/logrotate -f /etc/logrotate.d/raspberryhealth
 ```
 
+As you may notice, a script called raspberryhealth is used to do the rotating:
+
+```bash
+/var/log/raspberry/raspberryhealth
+{
+        daily
+        missingok
+        rotate 4
+        su syslog adm
+        create 664 syslog adm
+        size 1M
+        postrotate
+                /usr/lib/rsyslog/rsyslog-rotate
+        endscript
+}
+```
+
+Please place this script in /etc/logrotate.d/ and name it raspberryhealth, so the cronjob can find it.
 
 
