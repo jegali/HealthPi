@@ -55,4 +55,7 @@ Using the sleep command, the job is started with a time delay. My crontable look
 * * * * * sleep 50; /home/jens/health.sh
 ```
 
-https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/
+being "jens" my user and "/home/jens/health.sh" the path to the script to be executed.
+For some more information on how to handle cronjobs, please refer to this web page
+
+[https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/]
