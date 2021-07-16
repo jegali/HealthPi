@@ -11,3 +11,48 @@ incoming data in a dashboard and displays it via plotly/dash.
 ## Node Configuration
 
 Each node in the monitored cluster has a cronjob that calls the evaluation script every 10 seconds and sends the data to a central server via syslog.
+The table of cronjobs can be accessed via
+
+```bash
+crontab -e
+```
+
+This command may be called by any user with root privileges. Depending on the operating system, the cronjobs can be set from 
+daily recurring to every second. Ubuntu unfortunately only offers a maximum resolution of one second. 
+Since I wanted to run the job every 10 seconds, I had to resort to a little trick: 
+Using the sleep command, the job is started with a time delay. My crontable looks like this:
+
+```bash
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+
+* * * * * /home/jens/health.sh
+* * * * * sleep 10; /home/jens/health.sh
+* * * * * sleep 20; /home/jens/health.sh
+* * * * * sleep 30; /home/jens/health.sh
+* * * * * sleep 40; /home/jens/health.sh
+* * * * * sleep 50; /home/jens/health.sh
+```
+
+https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/
