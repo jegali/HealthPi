@@ -1,0 +1,12 @@
+/var/log/raspberry/raspberryhealth
+{
+        daily
+        missingok
+        rotate 4
+        su syslog adm
+        create 664 syslog adm
+        size 1M
+        postrotate
+                /usr/lib/rsyslog/rsyslog-rotate
+        endscript
+}
