@@ -246,4 +246,13 @@ After making the changes to /etc/ryslog.conf, please restart the service by typi
 sudo service rsyslog restart
 ```
 
+The main app is a dash app - dash uses flash as webserver.
+Dash itself is not so easy to explain, especially the callback functions were tricky to implement. 
+I did no further software engineering or cleanup of the code, maybe it can be helpful for you in the future.
+You can find the file in the folder logging-server. Start it by typing
 
+```bash
+python3 healthapp.py
+```
+
+The standard port is 8080, you just have to open up a browser and it should work if you followed all the previous steps.
