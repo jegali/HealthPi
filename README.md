@@ -70,6 +70,13 @@ python3 temperature.py
 
 So the temperature.py script is where the magic happens. I don't want to post the entire source code here, please have a look at the "node" folder where you can find the script that need to be deployed on the nodes.
 
+Maybe you need to install some python dependencies. Before running the script by cron do a manual run. I had to install psutil by
+
+```bash
+pip install psutil
+```
+
+
 ## Server Configuration
 
 If the logging server itself is also to be monitored ("quid custodiet custodes?"), two crontables are necessary. On the one hand, the logging server has the cron table that all nodes also have. This table of cronjobs can be accessed via
