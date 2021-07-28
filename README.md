@@ -258,8 +258,9 @@ Now, create the directory for the logs by typing
 
 ```bash
 mkdir /var/log/raspberry
-sudo chown syslog:adm /var/log/raspberry
-chmod 755 /var/log/raspberry
+sudo chown -r syslog:adm /var/log/raspberry
+cd /var/log/raspberry
+sudo chmod 664 *
 ```
 
 The main app is a dash app - dash uses flash as webserver.
