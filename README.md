@@ -158,7 +158,7 @@ with this content:
 #
 # m h  dom mon dow   command
 
-0 * * * * /usr/sbin/logrotate -f /etc/logrotate.d/raspberryhealth
+0 * * * * sudo /usr/sbin/logrotate -f /etc/logrotate.d/raspberryhealth
 ```
 
 As you may notice, a script called raspberryhealth is used to do the rotating:
@@ -252,6 +252,14 @@ After making the changes to /etc/ryslog.conf, please restart the service by typi
 
 ```bash
 sudo service rsyslog restart
+```
+
+Now, create the directory for the logs by typing
+
+```bash
+mkdir /var/log/raspberry
+sudo chown syslog:adm /var/log/raspberry
+chmod 755 /var/log/raspberry
 ```
 
 The main app is a dash app - dash uses flash as webserver.
